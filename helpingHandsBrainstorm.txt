@@ -1,0 +1,75 @@
+ HELPING HANDS
+    : An app to lend a hand cutting grass, pulling weeds, changing a light bulb for someone who just had surgery, elderly, impaired/disabled. Users can make a request and send out links for friends/family to sign up to help out. 
+
+    -Great for community service hours 
+    -Great way to discreetly ask for help
+    -Great way to get involve with family and friends without being overbearing 
+    
+
+MVPs for "Helping Hands" App 
+-Log in Page
+-Register Page 
+-Helper or In need Page
+-Sign up page for "Helpers"
+-Sign up page for "In Need"
+-Confirmation Page
+-Account Page: User info, listing past, current, and future tasks
+-Deactivate Page & Unsubscribe Page 
+
+Theme color: 
+White, navy blue, sand/cream 
+
+Main Page / Log in Page
+    -Username 
+    -Password 
+    -Register/Sign Up Button 
+    -Log in Button
+
+Register Page
+    -Username (unique)/email
+    -Password
+    -First name 
+    -Last name 
+    -Phone Number 
+    -Address 
+    -Additional Information 
+    -Submit Button
+
+After registering users get redirected to another page: 
+Form ask if they are a volunteer or recipient for help 
+
+If users are a volunteer this form will render: 
+Users can filter to help people by: 
+    -Location/address (include map so users can even draw an area)
+    -If it will be an Indoor/outdoor help
+    -Category of recipient: disabled, elderly stranded, homeless, single parent 
+    -Submit button 
+
+If user is a recipient, this form will render: 
+Users can input: 
+    -Location/address
+    -If the assistance will be indoors or outdoors
+    -Date needing help
+    -Category/Type of assistance: driving, cooking, cutting grass, house chores, pick up kids, grocery shopping, dog walking, 
+    -Reasons they need assistance: elderly, recovering from surgery, temporary assistance, n/a 
+    -Special requests/accommodations 
+    - Submit button 
+
+Confirm Assisting Sign-Up page: 
+    -Username 
+    -Email 
+    -Person in need of help's name 
+    -Date of assignment 
+    -Location 
+    -Any special requests/accommodations listed 
+    -Do they want to set reminders?
+    -Submit Button
+
+Deactivate Account
+    -Username
+    -Password to confirm Deactivation 
+    -Deactivate button 
+
+Database: prepare data model, db designer: what the tables are, foreign keys, relations table, 
+
+Pages for the application 
