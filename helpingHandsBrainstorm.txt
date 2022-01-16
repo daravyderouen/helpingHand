@@ -13,7 +13,7 @@ MVPs for "Helping Hands" App
 -Sign up page for "Helpers"
 -Sign up page for "In Need"
 -Confirmation Page
--Account Page: User info, listing past, current, and future tasks
+-Account/Profile Page: User info, listing past, current, and future tasks
 -Deactivate Page & Unsubscribe Page 
 
 Theme color: 
@@ -70,6 +70,14 @@ Deactivate Account
     -Password to confirm Deactivation 
     -Deactivate button 
 
+Bubble calendar 
+
 Database: prepare data model, db designer: what the tables are, foreign keys, relations table, 
 
 Pages for the application 
+
+Profile Page
+-Include profile picture 
+-First & Last name
+-Address 
+-List of all tasks completed, tasks in the future 
