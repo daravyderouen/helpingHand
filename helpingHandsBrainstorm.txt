@@ -81,3 +81,4 @@ Profile Page
 -First & Last name
 -Address 
 -List of all tasks completed, tasks in the future 
+-Calendar 
