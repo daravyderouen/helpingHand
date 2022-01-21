@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
+
 export class FormPersonalDetails extends Component {
   continue = e => {
     e.preventDefault();
@@ -85,13 +86,15 @@ export class FormPersonalDetails extends Component {
             <TextField
             // FIND A WAY TO INCLUDE AN OPTION TO PUT DATES IN
 
-              placeholder="Enter Your Date of Request"
+              placeholder="Enter Your Date of Request i.e. 02/14/2022"
               label="Date of Request"
               onChange={handleChange('dateOfRequest')}
               defaultValue={values.dateOfRequest}
               margin="normal"
               fullWidth
             />
+            
+
             <br />
               <TextField
               placeholder="Enter Your Special Request/Accommodations"
