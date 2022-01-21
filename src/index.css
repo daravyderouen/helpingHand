@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiDialog-paper {
+  padding: 15px;
+}
+
+button.MuiButton-containedSecondary {
+  margin-bottom: 10px;
+  color: teal;
+}
