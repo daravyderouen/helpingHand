@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -7,7 +7,7 @@ import Register from './pages/Register';
 import Requests from './pages/Requests';
 import About from './pages/About';
 import Support from './pages/Support';
-import Logo from './components/Logo'
+
 
 
 
@@ -19,15 +19,15 @@ const  App =() => {
         <Navigation />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/reports' component={Profile} />
-          <Route path='/register' component={Register} />
-           <Route path='/request' component={Requests} />
-          <Route path='/about' component={About} />
-          <Route path='/support' component={Support} /> 
+          <Route path='/Profile' component={Profile} />
+          <Route path='/Register' component={Register} />
+           <Route path='/Requests' component={Requests} />
+          <Route path='/About' component={About} />
+          <Route path='/Support' component={Support} /> 
         </Switch>
       </Router>
     </>
-    <Logo />
+    
       
       {/* <UserForm /> */}
     </div>

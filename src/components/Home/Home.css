@@ -1,0 +1,25 @@
+.home {
+  color: BFE5D9;
+  display: float;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeH1 {
+  font-family: "Cookie";
+  text-align: left;
+  margin-left: 25%;
+  font-size: 20vh;
+}
+#homeLogo {
+  height: 50vh;
+  width: 20vw;
+  margin-top: 2%;
+  margin-left: 5%;
+  border: 1px solid teal;
+}
+
+.homeH2 {
+  margin-top: 0%;
+  margin-left: 30%;
+}

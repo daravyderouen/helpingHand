@@ -1,0 +1,20 @@
+.requests {
+    color: BFE5D9;
+    justify-content: center;
+}
+
+.requestsH1 {
+    font-family: 'Cookie';
+    text-align: center;
+    font-size: 10vh;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px)  {
+    
+    .requestsH1 {
+        font-family: 'Cookie';
+        text-align: center;
+        font-size: 2rem;
+    }
+
+}

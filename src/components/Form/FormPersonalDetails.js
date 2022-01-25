@@ -107,12 +107,14 @@ export class FormPersonalDetails extends Component {
             <br />
 
             <Button
+            id="FormPersonalButton"
               color="secondary"
               variant="contained"
               onClick={this.back}
             >Back</Button>
 
             <Button
+            id="FormPersonalButton"
               color="primary"
               variant="contained"
               onClick={this.continue}

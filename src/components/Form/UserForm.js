@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import FormUserDetails from './FormUserDetails';
-import FormPersonalDetails from './FormPersonalDetails';
-import Confirm from './Confirm';
-import Success from './Success';
+import FormUserDetails from '../Form/FormUserDetails';
+import FormPersonalDetails from '../Form/FormPersonalDetails';
+import Confirm from '../Form/Confirm';
+import Success from '../Form/Success';
 
 export class UserForm extends Component {
   state = {

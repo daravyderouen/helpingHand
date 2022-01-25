@@ -1,0 +1,13 @@
+#FormUserButton
+#FormPersonalButton
+#ConfirmButton
+#SuccessButton {
+    color: teal;
+    font-size: larger;
+    font-family: 'Cookie', cursive;
+}
+
+.Home
+.Profile {
+    font-family: 'Cookie';
+}

@@ -1,0 +1,11 @@
+.register {
+    color: BFE5D9;
+    justify-content: center;
+}
+
+.registerH1 {
+    font-family: 'Cookie';
+    text-align: left;
+    margin-top: 10%;
+    font-size: 20vh;
+}

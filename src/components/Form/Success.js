@@ -3,6 +3,8 @@ import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+// import {withRouter} from 'react-router-dom'
+
 
 export class Success extends Component {
   continue = e => {
@@ -15,6 +17,15 @@ export class Success extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
+  constructor(props) {
+    super(props)
+
+    this.goHome = this.goHome.bind(this)
+  }
+
+  goHome() {
+    this.props.history.push('/Profile')
+  }
 
   render() {
     return (
@@ -30,18 +41,25 @@ export class Success extends Component {
 
 
             <Button
+            id='SuccessButton'
               color="primary"
               variant="contained"
-              onClick={this.continue}
-            >Continue</Button>
+              onClick={this.goHome} href="/" 
+            >Create Profile</Button>
           </Dialog>
           {/* </Dialog> */}
         </>
-
+        <div className="foo">
+      <button onClick={this.goHome} />
+    </div>
+  
         
       </MuiThemeProvider>
     );
   }
+  
+  
 }
+
 
 export default Success;
