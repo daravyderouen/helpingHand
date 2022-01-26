@@ -3,7 +3,6 @@ import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { useFormik } from 'formik';
 // import {withRouter} from 'react-router-dom'
 
 
@@ -27,7 +26,7 @@ export class Success extends Component {
   goHome() {
     this.props.history.push('/Profile')
   }
-formik = useFormik({})
+
 
   render() {
     return (

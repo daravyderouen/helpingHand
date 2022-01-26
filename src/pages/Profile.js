@@ -7,10 +7,8 @@ import '../components/Profile/Profile.css'
 function Profile(props) {
   return (
     <div className='profile'>
-      <h1 className='profileH1'>Welcome *Add Username*</h1>
-      <button onClick={props.onClick}>
-      Login
-    </button>
+      <h1 className='profileH1'>Welcome </h1>
+     
       {/* <Calendar /> */}
     </div>
   );

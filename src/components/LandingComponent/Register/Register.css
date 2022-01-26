@@ -1,11 +1,11 @@
 .register {
-    color: BFE5D9;
+    display: grid;
     justify-content: center;
 }
 
 .registerH1 {
-    font-family: 'Cookie';
-    text-align: left;
-    margin-top: 10%;
-    font-size: 20vh;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-size: 3em;
+    color: white;
 }

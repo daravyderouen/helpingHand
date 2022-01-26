@@ -45,6 +45,7 @@ export class UserForm extends Component {
   };
 
   render() {
+    
     const { step } = this.state;
     const {  userName, firstName, lastName, email, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations } = this.state;
     const values = {  userName, firstName, lastName, email, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations};
@@ -52,6 +53,7 @@ export class UserForm extends Component {
     switch (step) {
       case 1:
         return (
+          
           <FormUserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}

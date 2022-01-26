@@ -2,9 +2,9 @@
     color: teal;
 }
 
-.registerH1 {
-  font-family: "Cookie";
-  text-align: left;
-  margin-top: 10%;
-  font-size: 20vh;
+.profileH1 {
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-size: 3em;
+    color: white;
 }

@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
-import { useFormik } from 'formik';
+
 
 export class Confirm extends Component {
   continue = e => {
@@ -17,7 +17,7 @@ export class Confirm extends Component {
     e.preventDefault();
     this.props.prevStep();
   };
- formik = useFormik({})
+ 
   render() {
     const {
       values: { userName, firstName, lastName, email, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations }

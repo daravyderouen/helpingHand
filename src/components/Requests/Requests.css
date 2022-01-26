@@ -4,15 +4,16 @@
 }
 
 .requestsH1 {
-    font-family: 'Cookie';
+    font-family: 'Playfair Display';
     text-align: center;
-    font-size: 10vh;
+    font-size: 3em;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
     
     .requestsH1 {
-        font-family: 'Cookie';
+        font-family: 'Meow Script';
         text-align: center;
         font-size: 2rem;
     }

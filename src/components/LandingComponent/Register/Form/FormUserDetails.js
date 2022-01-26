@@ -12,6 +12,7 @@ export class FormUserDetails extends Component {
   };
 
   render() {
+    
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
