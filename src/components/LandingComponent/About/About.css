@@ -1,5 +1,6 @@
 .about {
-display: flexbox;}
+  display: flexbox;
+}
 
 .aboutH1 {
   font-family: "Cookie";
@@ -29,6 +30,7 @@ display: flexbox;}
 }
 
 .aboutP1 {
+  font-family: "Style Script";
   border: 1px solid teal;
   padding: 20px;
   width: 300px;
@@ -38,11 +40,12 @@ display: flexbox;}
 }
 
 .aboutP2 {
+  font-family: "Style Script";
   border: 1px solid teal;
   float: left;
-  padding: 20px;
-  width: 500px;
-  height: 350px;
+  padding: 10px;
+  width: 300px;
+  height: 400px;
   font-size: 4vh;
   text-align: center;
 }
@@ -51,18 +54,18 @@ display: flexbox;}
   .aboutH1 {
     font-family: "Cookie";
     text-align: center;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
-
 
   .aboutH2 {
     color: #87c7b3;
+    font-family: "Meow";
     justify-content: center;
     text-align: center;
-    font-size: .2rem;
+    font-size: 0.2rem;
     margin-left: 5%;
   }
-  
+
   .aboutFlex-container {
     display: none;
     flex-direction: column;
@@ -70,28 +73,27 @@ display: flexbox;}
   .aboutFlexChild {
     flex: 1;
   }
-  
+
   .aboutFlexChild2 {
     margin-left: 10%;
     margin-right: 0%;
   }
-  
+
   .aboutP1 {
     /* border: 1px solid teal; */
     padding: 2%;
     width: 5vw;
     height: 100vh;
-    font-size: .12pt;
+    font-size: 0.12pt;
     text-align: center;
   }
-  
+
   .aboutP2 {
     /* border: 1px solid teal; */
     float: none;
     /* width: 5vw;
     height: 100vh; */
-    font-size: .12pt;
+    font-size: 0.12pt;
     text-align: center;
   }
-  
 }

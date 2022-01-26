@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import './Form.css'
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -60,8 +59,7 @@ export class FormUserDetails extends Component {
             />
             <br />
             <Button
-            id="FormUserButton"
-              // color="primary"
+              color="primary"
               variant="contained"
               onClick={this.continue}
             >Continue</Button>

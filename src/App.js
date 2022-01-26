@@ -1,20 +1,27 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './components/LandingComponent/Home/Home';
 import Profile from './pages/Profile';
-import Register from './pages/Register';
+import Register from './components/LandingComponent/Register/Register';
 import Requests from './pages/Requests';
-import About from './pages/About';
+import About from './components/LandingComponent/About/About';
 import Support from './pages/Support';
+// import Login from './components/LandingComponent/Login';
+// import {Routes } from 'react-router';
+// import {useState, useEffect} from 'react'
+// import Dashboard from './components/Dashboard';
 
 
 
 
 const  App =() => {
+ 
+
   return (
     <div className="App">
-       <>
+    <>
+   
       <Router>
         <Navigation />
         <Switch>
@@ -26,11 +33,13 @@ const  App =() => {
           <Route path='/Support' component={Support} /> 
         </Switch>
       </Router>
-    </>
-    
       
+    </>
+      {/* </Routes> */}
+    
       {/* <UserForm /> */}
     </div>
+    
   );
   
 }

@@ -1,14 +1,16 @@
 import React from 'react';
 import '../components/Profile/Profile.css'
-import Success from '../components/Form/Success';
+// import Register from '../pages/Register';
 // import Calendar from '../components/Calendar'
 
-function Profile() {
+
+function Profile(props) {
   return (
     <div className='profile'>
-      <h1 className='profileH1'>Profile</h1>
-      < Success />
-     
+      <h1 className='profileH1'>Welcome *Add Username*</h1>
+      <button onClick={props.onClick}>
+      Login
+    </button>
       {/* <Calendar /> */}
     </div>
   );

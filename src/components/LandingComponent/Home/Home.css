@@ -9,17 +9,22 @@
   font-family: "Cookie";
   text-align: left;
   margin-left: 25%;
-  font-size: 20vh;
+  font-size: 10em;
 }
 #homeLogo {
+    float: left;
   height: 50vh;
   width: 20vw;
-  margin-top: 2%;
   margin-left: 5%;
   border: 1px solid teal;
 }
 
 .homeH2 {
+    float: right;
+    font-family: 'Style Script';
+    font-size: 2rem;
   margin-top: 0%;
   margin-left: 30%;
 }
+
+

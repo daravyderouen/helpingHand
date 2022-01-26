@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import FormUserDetails from '../Form/FormUserDetails';
-import FormPersonalDetails from '../Form/FormPersonalDetails';
-import Confirm from '../Form/Confirm';
-import Success from '../Form/Success';
+import FormUserDetails from './FormUserDetails';
+import FormPersonalDetails from './FormPersonalDetails';
+import Confirm from './Confirm';
+import Success from './Success';
+
 
 export class UserForm extends Component {
   state = {
@@ -20,7 +21,8 @@ export class UserForm extends Component {
     dateOfRequest: '',
     specialRequestOrAccommodations: ''
   };
-
+  
+ 
   // Proceed to next step
   nextStep = () => {
     const { step } = this.state;
@@ -28,7 +30,7 @@ export class UserForm extends Component {
       step: step + 1
     });
   };
-
+  
   // Go back to prev step
   prevStep = () => {
     const { step } = this.state;
@@ -36,7 +38,7 @@ export class UserForm extends Component {
       step: step - 1
     });
   };
-
+  
   // Handle fields change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
