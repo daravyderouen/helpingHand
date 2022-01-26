@@ -6,7 +6,7 @@ import "../Home/Home.css";
 // import Login from "../LandingPage/Login";
 // import Register from '../Register/Register';
 
-function Home(props) {
+function Home() {
   return (
     <div className="home">
       <div class="container">

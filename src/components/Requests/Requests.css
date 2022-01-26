@@ -10,6 +10,24 @@
     color: white;
 }
 
+#postRequestForm {
+    background-color: rgb(200, 250, 245);
+    width: 20vw;
+    height: 55vh;
+    margin-left: 40%;
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    color: rgb(54, 53, 53);
+    font-size: 1.5rem;
+    border: 5px solid blue; 
+    outline: 5px solid black;
+    box-shadow:
+    0 0 0 20px hsl(0, 11%, 70%),
+    0 0 0 15px hsl(0, 0%, 90%);
+}
+
+
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
     
     .requestsH1 {

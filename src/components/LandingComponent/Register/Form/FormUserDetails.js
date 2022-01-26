@@ -10,10 +10,20 @@ export class FormUserDetails extends Component {
     e.preventDefault();
     this.props.nextStep();
   };
+  constructor(props) {
+    super(props)
+
+    this.goHome = this.goHome.bind(this)
+  }
+
+  goHome() {
+    this.props.history.push('/Home')
+  }
 
   render() {
     
     const { values, handleChange } = this.props;
+    
     return (
       <MuiThemeProvider>
         <>
@@ -33,22 +43,22 @@ export class FormUserDetails extends Component {
             />
             <br />
             <TextField
-              placeholder="Enter Your First Name"
-              label="First Name"
-              onChange={handleChange('firstName')}
-              defaultValue={values.firstName}
+              placeholder="Enter Your Name"
+              label="Name"
+              onChange={handleChange('name')}
+              defaultValue={values.name}
               margin="normal"
               fullWidth
             />
             <br />
-            <TextField
+            {/* <TextField
               placeholder="Enter Your Last Name"
               label="Last Name"
               onChange={handleChange('lastName')}
               defaultValue={values.lastName}
               margin="normal"
               fullWidth
-            />
+            /> */}
             <br />
             <TextField
               placeholder="Enter Your Email"
@@ -59,6 +69,30 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <br />
+            <TextField
+              placeholder="Enter Your Password"
+              label="Password"
+              onChange={handleChange('password')}
+              defaultValue={values.password}
+              margin="normal"
+              fullWidth
+            />
+             <br />
+             <TextField
+              placeholder="Confirm Your Password"
+              label="Confirm Password"
+              onChange={handleChange('confirmPassword')}
+              defaultValue={values.confirmPassword}
+              margin="normal"
+              fullWidth
+            />
+             <br />
+            <Button
+              color="teal"
+              variant="contained"
+              onClick={this.goHome} href="/" 
+            >Exit</Button>
+            <br/>
             <Button
               color="primary"
               variant="contained"

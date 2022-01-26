@@ -8,10 +8,10 @@ import Success from './Success';
 export class UserForm extends Component {
   state = {
     step: 1,
-    userName: '',
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
+    password: '',
+    passWord: '',
     address: '',
     city: '',
     volunteer: '',
@@ -47,8 +47,8 @@ export class UserForm extends Component {
   render() {
     
     const { step } = this.state;
-    const {  userName, firstName, lastName, email, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations } = this.state;
-    const values = {  userName, firstName, lastName, email, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations};
+    const {  userName, name, email, password, confirmPassword, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations } = this.state;
+    const values = {  userName, name, email, password, confirmPassword, address, city, volunteer, recipient, publicPost, privatePost, dateOfRequest, specialRequestOrAccommodations};
 
     switch (step) {
       case 1:

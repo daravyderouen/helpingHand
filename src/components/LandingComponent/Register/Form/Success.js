@@ -20,7 +20,7 @@ export class Success extends Component {
   constructor(props) {
     super(props)
 
-    this.goHome = this.goHome.bind(this)
+    this.goProfile = this.goProfile.bind(this)
   }
 
   goHome() {
@@ -45,13 +45,13 @@ export class Success extends Component {
             id='SuccessButton'
               color="primary"
               variant="contained"
-              onClick={this.goHome} href="/" 
+              onClick={this.goProfile} href="/Profile" 
             >Create Profile</Button>
           </Dialog>
           {/* </Dialog> */}
         </>
         <div className="foo">
-      <button onClick={this.goHome} />
+      <button onClick={this.goProfile} />
     </div>
   
         

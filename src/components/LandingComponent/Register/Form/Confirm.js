@@ -73,11 +73,11 @@ export class Confirm extends Component {
 
             <Button
             id='ConfirmButton'
-              color="secondary"
+              color="teal"
               variant="contained"
               onClick={this.back}
             >Back</Button>
-
+            <br />
             <Button
             id='ConfirmButton'
               color="primary"
