@@ -12,20 +12,64 @@
 
 #postRequestForm {
     background-color: rgb(200, 250, 245);
-    width: 20vw;
-    height: 55vh;
+    width: 22vw;
+    height: 80vh;
     margin-left: 40%;
-    display: grid;
+    margin-bottom: 10%;
+    padding-left: .5%;
+    display: flex;
     justify-content: center;
     align-items: center; 
     color: rgb(54, 53, 53);
     font-size: 1.5rem;
-    border: 5px solid blue; 
+    /* border: 5px solid blue;  */
     outline: 5px solid black;
     box-shadow:
-    0 0 0 20px hsl(0, 11%, 70%),
-    0 0 0 15px hsl(0, 0%, 90%);
+    0 0 0 10px hsl(0, 5%, 70%),
+    0 0 0 5px hsl(0, 0%, 90%);
 }
+
+#postReqBtn {
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    margin-left: 20%;
+}
+
+.postReqPostDiv {
+    border-bottom: 1px solid black;
+}
+
+/*styling for input*/
+input[type=text], select, textarea {
+    width: 90%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+    justify-content: center;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+
 
 
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
