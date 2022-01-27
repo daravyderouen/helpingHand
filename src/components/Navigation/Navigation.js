@@ -20,7 +20,7 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
           <h1 className="NavCoName">Helping Hands</h1>
-          <div className="homeButton">
+          {/* <div className="homeButton"> */}
             <a target="_blank" href="/Register">
               <button id="bt">Register</button>
             </a>
@@ -30,8 +30,9 @@ function Navbar() {
               
               <button id="bt">Log-In</button>
             </a>
-          </div>
+          {/* </div> */}
         </div>
+        
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
