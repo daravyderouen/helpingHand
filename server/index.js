@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const sequelize = require('./sequelize')
 const bcrypt = require('bcrypt')
+const { seed, getUsers, createUsers, deleteUsers } = require('./controller.js')
 
 //Middleware
 app.use(express.json());
@@ -59,5 +60,10 @@ app.post('/login', async (req, res) => {
   }
 })
 // sequelize.authenticate()
+app.post('/seed', seed)
+app.get('/users', getUsers)
+app.post('/users', createUsers)
+
+app.delete('/users/:id', deleteUsers)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

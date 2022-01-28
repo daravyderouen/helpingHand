@@ -18,7 +18,7 @@ function Home() {
         <span></span>
         <div class="content">
           <h2>Welcome to Helping Hands! </h2>
-          <p>Everyday someone could use your help or you may be in need of some assistance. Become a volunteer today or post a request and receive some help!</p>
+          {/* <p>Everyday someone could use your help or you may be in need of some assistance. Become a volunteer today or post a request and receive some help!</p> */}
         </div>
         
       </div>

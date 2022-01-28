@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+# Helping Hands
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed when I was struck with COVID and wondered how can someone get help if they have no one to turn to. Thus this application is to give back to the community. 
 
-## Available Scripts
+## Features
+
+- Register and Log In
+- Create a request for help
+- Create a task list 
 
 In the project directory, you can run:
 
