@@ -1,69 +1,88 @@
-const express = require('express');
-const cors = require('cors');
-// const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
-const sequelize = require('./sequelize')
-const bcrypt = require('bcrypt')
-const { seed, getUsers, createUsers, deleteUsers } = require('./controller.js')
+const PORT = process.env.PORT || 3000
+const express = require('express')
+// const path = require('path')
+const cors = require('cors')
+const axios = require('axios')
+require('dotenv').config()
+const app = express()
 
-//Middleware
-app.use(express.json());
-app.use(cors());
+app.use(express.json())
+app.use(cors())
 
-//Put endpoints here
-app.post('/register', async (req, res) => {
-  const {username, name, password} = req.body
-  const checkUser = await sequelize.query(`
-  SELECT * FROM users WHERE username = '${username}'
-  `)
-  // console.log(checkUser[1].rowCount)
-  if(checkUser[1].rowCount !== 0) {
-    res.status(500).send('Username already Exists')
-  } else {
-    const salt = bcrypt.genSaltSync(10)
-    const passwordHash = bcrypt.hashSync(password, salt)
-    await sequelize.query(`
-    INSERT INTO users(name, username, password)
-    VALUES (
-      '${name}',
-      '${username}',
-      '${passwordHash}'
-    )
-    `)
-    const userInfo = await sequelize.query(`
-      SELECT id, username, name FROM users WHERE username = '${username}'
-    `)
-    res.status(200).send(userInfo)
-  }
-})
 
-app.post('/login', async (req, res) => {
-  const {username, password} = req.body
-  const validUser = await sequelize.query(`
-    SELECT * FROM users WHERE username = '${username}'
-  `).catch((err) => console.log(err))
-  console.log(validUser)
-  if(validUser[1].rowCount === 1) {
-    if (bcrypt.compareSync(password, validUser[0][0].password)) {
-      let object = {
-        id: validUser[0][0].id,
-        name: validUser[0][0].name,
-        username
-      }
-      res.status(200).send(object)
-    } else {
-      res.status(401).send('Password is Incorrect')
+app.get('/', (req, res) => {
+  res.json('hi')
+  const options = {
+    method: 'GET',
+    url: 'https://daravyderouen-helpinghands.herokuapp.com/home',
+    headers: {
+        'helpinghands-host': 'daravyderouen-helpinghands.herokuapp.com/home',
+        'helpinghands-key': process.env.CONNECTION_STRING
     }
-  } else {
-    res.status(401).send('Username is Incorrect')
   }
+  axios.request(options).then((response) => {
+    res.json(response.data)
+  }).catch((error) => {
+    console.log(error)
+  })
 })
-// sequelize.authenticate()
+
+
+
+
+// const { SERVER_PORT } = process.env
+const { seed, getUsers, createUsers, deleteUsers} = require('./controller.js')
+
+
+
+app.use(express.static("server"));
+// app.get('/', (req, res) => {
+//   res.sendFile('/index.html')
+
+// })
+
 app.post('/seed', seed)
-app.get('/users', getUsers)
-app.post('/users', createUsers)
 
-app.delete('/users/:id', deleteUsers)
+app.get('/guests', getUsers)
+app.post('/guests', createUsers)
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.delete('/guests/:id', deleteUsers)
+
+
+
+
+
+
+
+
+
+/*
+app.get("/index.css", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.css"));
+    //rollbar.log('They need CSS!')
+  });
+  app.get("/index.js", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.js"));
+    //rollbar.log('Hey, they started me up again')
+  });
+*/
+
+
+
+
+
+
+
+
+
+//app.use(rollbar.errorHandler());
+
+
+
+
+
+
+
+app.listen(PORT, () => {
+  console.log(`My server is on fiya ${PORT}`)
+})

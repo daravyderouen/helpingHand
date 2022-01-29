@@ -50,11 +50,6 @@ export class Success extends Component {
           </Dialog>
           {/* </Dialog> */}
         </>
-        <div className="foo">
-      <button onClick={this.goProfile} />
-    </div>
-  
-        
       </MuiThemeProvider>
     );
   }

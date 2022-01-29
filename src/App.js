@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/LandingComponent/Home/Home';
@@ -15,22 +15,24 @@ import Support from './pages/Support';
 
 
 
-const  App =() => {
- 
-
+function App ( { register,  requests}) {
+  
   return (
     <div className="App">
     <>
    
       <Router>
         <Navigation />
+        <></>
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/Profile' component={Profile} />
-          <Route path='/Register' component={Register} />
-           <Route path='/Requests' component={Requests} />
-          <Route path='/About' component={About} />
-          <Route path='/Support' component={Support} /> 
+          <Route exact path={"/"}  component={Home} />
+          <Route exact path=
+          {'/profile'}render={(props) =><Profile />} />
+          <Route exact path={'/register' }render={props=>
+          <Register requests={register} {...props}/>}  />
+           <Route exact path={'/requests'}render={props=> <Requests requests={requests} {...props}/>}  />
+          <Route exact path={'/about'} render={(props)=> <About />} />
+          <Route exact path={'/support' }render={props => <Support />} />
         </Switch>
       </Router>
       
@@ -43,5 +45,6 @@ const  App =() => {
   );
   
 }
+
 
 export default App;

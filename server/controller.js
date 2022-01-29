@@ -1,17 +1,16 @@
-const {Sequelize} = require('sequelize')
+const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize(
-  "",
-  {
+const { CONNECTION_STRING } = process.env;
+
+const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: "postgres",
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
-      }
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
     }
-  }
-)
+})
 
 
 
@@ -22,12 +21,18 @@ module.exports = {
 
       create table users (
           user_id SERIAL PRIMARY KEY, 
-          username STRING,
+          email TEXT(100),
           password TEXT(100),
-          email STRING(50),
-          address VARCHAR(15),
-          city varchar
-      );
+      ),
+      create table tasks (
+        task_id SERIAL PRIMARY KEY, 
+        poster_id INTEGER reference users,
+        claimer_id INTEGER reference users,
+        description TEXT(200),
+        driving_assistance(boolean),
+        address STRING(200)
+        timestamp TIMESTAMP
+    );
 
       
       `).then(() => {//make sure in the future that in order for sequelizer to work, PG web and console browser properties must all match, better wise to stick to using all lowercase!
@@ -46,22 +51,23 @@ module.exports = {
   createUsers: (req, res) => {
       console.log(req.body)
       let {
-          firstname,
-          lastname,
-          phonenumber,
-          dishselected
+          email,
+          password,
 
       } = req.body;
 
 
       sequelize
           .query(
-              `insert into users (firstname, lastname, phonenumber, dishselected)
-              values ('${firstname}', '${lastname}', '${phonenumber}', '${dishselected}');
+              `insert into users (email, password)
+              values ('${email}', '${password}';
 
               select * from users
-              where firstname = '${firstname}' and lastname = '${lastname}' and phonenumber = '${phonenumber}' and dishselected = '${dishselected}'
+              where email = '${email}' and password = '${password}' 
               ;
+
+              
+
               `)
           .then((dbRes) => res.status(200).send(dbRes[0]))
           .catch((err) => console.log(err));
